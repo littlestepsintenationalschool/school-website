@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LITTLE STEPS INTERNATIONAL SCHOOL</title>
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+header{
+    width:100%;
+    background:#0A3D62;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:10px 50px;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+}
+
+.logo img{
+    width:70px;
+    height:70px;
+    border-radius:50%;
+    border:3px solid #FFD700;
+    object-fit:cover;
+    margin-right:15px;
+}
+
+.school-name h2{
+    color:#fff;
+    font-size:26px;
+    margin:0;
+}
+
+.school-name p{
+    color:#FFD700;
+    font-size:15px;
+    margin-top:5px;
+    letter-spacing:2px;
+}
+
+nav{
+    display:flex;
+    align-items:center;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:30px;
+    font-size:18px;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:#FFD700;
+}
+.hero{
+    height:100vh;
+    background:url('school.png') no-repeat center center;
+    background-size:cover;
+    background-attachment:fixed;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    color:white;
+    position:relative;
+}
+
+.hero-content{
+    background:rgba(0,0,0,0.5);
+    padding:40px;
+    border-radius:15px;
+    max-width:700px;
+    text-align:center;
+    position:relative;
+    z-index:2;
+}
+.hero h1{
+    font-size:48px;
+    line-height:1.2;
+}
+
+.hero p{
+margin:20px 0;
+font-size:22px;
+}
+
+button{
+padding:15px 35px;
+background:#FFC107;
+border:none;
+font-size:18px;
+border-radius:8px;
+cursor:pointer;
+}
+
+.section{
+padding:70px;
+text-align:center;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+margin-top:40px;
+}
+
+.card{
+background:#f5f5f5;
+padding:30px;
+border-radius:15px;
+box-shadow:0 10px 20px rgba(0,0,0,.1);
+}
+
+footer{
+background:#0A3D62;
+color:white;
+text-align:center;
+padding:25px;
+}
+
+.sticky-title{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:80px;          /* lagbhag top 20% area */
+    background:rgba(10,61,98,0.95);
+    color:white;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:34px;
+    font-weight:bold;
+    z-index:9999;
+    transition:0.3s;
+}
+.contact{
+    padding:60px 20px;
+}
+
+.contact-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+    max-width:1200px;
+    margin:auto;
+}
+
+.contact-box{
+    background:white;
+    color:black;
+    padding:25px;
+    border-radius:12px;
+    word-break:break-word;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    
+}
+.email-box p{
+    font-size:14px;
+    word-break:break-word;
+}
+
+.slider-section{
+padding:70px;
+text-align:center;
+background:#f8f9fa;
+}
+
+.slider img{
+width:90%;
+height:500px;
+object-fit:cover;
+border-radius:20px;
+box-shadow:0 10px 25px rgba(0,0,0,.2);
+}
+.principal{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:40px 80px;
+    gap:60px;
+}
+
+.principal img{
+width:280px;
+height:320px;
+border-radius:20px;
+object-fit:cover;
+box-shadow:0 10px 20px rgba(0,0,0,.2);
+}
+
+
+.principal-text{
+max-width:700px;
+}
+
+.principal-text h2{
+color:#0A3D62;
+margin-bottom:20px;
+}
+
+.principal-text{
+    max-width:650px;
+}
+
+.principal-text p{
+    font-size:15px;
+    line-height:1.5;
+    text-align:justify;
+    color:#555;
+    margin-bottom:10px;
+}
+.quote-box{
+    background:#f8f9fa;
+    border-left:5px solid #FFC107;
+    padding:18px 22px;
+    margin:25px 0;
+    font-style:italic;
+    color:#0A3D62;
+    font-size:20px;
+    border-radius:10px;
+    box-shadow:0 3px 10px rgba(0,0,0,0.1);
+}
+
+.best-wishes{
+    margin-top:30px;
+    font-size:22px;
+    color:#0A3D62;
+}
+
+.management{
+    padding:60px 80px;
+    background:#f8f9fa;
+}
+
+.management h2{
+    text-align:center;
+    color:#0A3D62;
+    font-size:34px;
+    margin-bottom:40px;
+}
+
+.management-team{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:30px;
+    margin-bottom:40px;
+}
+
+.member{
+    text-align:center;
+}
+
+.member img{
+    width:220px;
+    height:260px;
+    object-fit:cover;
+    border-radius:20px;
+    box-shadow:0 10px 20px rgba(0,0,0,.2);
+}
+
+.member h3{
+    margin-top:15px;
+    color:#0A3D62;
+    font-size:22px;
+}
+
+.member p{
+    color:#666;
+    font-size:17px;
+    margin-top:5px;
+}
+
+.management-message{
+    max-width:1100px;
+    margin:auto;
+}
+
+.management-message p{
+    font-size:15px;
+    line-height:1.7;
+    text-align:justify;
+    color:#555;
+    margin-bottom:12px;
+}
+
+.best-wishes{
+    margin-top:25px;
+    font-size:20px;
+    color:#0A3D62;
+}
+.management-sign{
+    margin-top:40px;
+    text-align:center;
+}
+
+.management-sign h3{
+    color:#0A3D62;
+    font-size:32px;
+    font-weight:bold;
+    margin-bottom:10px;
+}
+
+.management-sign .line{
+    width:90px;
+    height:4px;
+    background:#FFC107;
+    margin:12px auto 20px;
+    border-radius:5px;
+}
+
+.management-sign h4{
+    color:#0A3D62;
+    font-size:26px;
+    margin-bottom:8px;
+}
+
+.management-sign p{
+    font-size:20px;
+    color:#444;
+    margin-bottom:5px;
+}
+
+.management-sign span{
+    color:#777;
+    font-size:17px;
+    letter-spacing:1px;
+}
+
+.stats{
+
+display:grid;
+
+grid-template-columns:repeat(4,1fr);
+
+background:#0A3D62;
+
+padding:70px;
+
+text-align:center;
+
+color:white;
+
+}
+
+.stat h2{
+
+font-size:55px;
+
+color:#FFC107;
+
+}
+
+.stat p{
+
+font-size:22px;
+
+margin-top:10px;
+
+}
+
+.social-media{
+    margin-top:30px;
+    text-align:center;
+}
+
+.social-media h3{
+    margin-bottom:15px;
+    color:white;
+}
+
+.social-media a{
+    display:inline-block;
+    margin:0 10px;
+}
+
+.social-media img{
+    width:40px;
+    height:40px;
+    transition:.3s;
+}
+
+.social-media img:hover{
+    transform:scale(1.15);
+}
+
+html{
+    scroll-behavior:smooth;
+}
+@media(max-width:992px){
+
+.management-team{
+    grid-template-columns:repeat(2,1fr);
+}
+
+}
+
+@media(max-width:600px){
+
+.management-team{
+    grid-template-columns:1fr;
+}
+
+.management{
+    padding:40px 20px;
+}
+
+.member img{
+    width:180px;
+    height:220px;
+}
+
+}
+</style>
+
+</head>
+<body>
+
+<header>
+
+<div class="logo">
+
+<img src="logo.jpeg" >
+
+<div class="school-name">
+
+<h2>LITTLE STEPS</h2>
+
+<p>INTERNATIONAL SCHOOL</p>
+
+</div>
+
+</div>
+
+<nav>
+
+<a href="#home">Home</a>
+
+<a href="#about">About</a>
+
+<a href="#gallery">Gallery</a>
+
+<a href="#contact">Contact</a>
+
+</nav>
+
+</header>
+<section class="hero" id="home">
+
+<div class="hero-content">
+
+<h1>Welcome To LITTLE STEPS INTERNATIONAL SCHOOL</h1>
+<p>Empowering Young Minds For A Better Tomorrow</p>
+
+<button>Admission Open</button>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<h2>Why Choose Us?</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>Experienced Teachers👩🏻‍🏫</h3>
+<p>Highly qualified Teachers across multiple cities.</p>
+</div>
+
+<div class="card">
+<h3>Smart Classrooms🖥️</h3>
+<p>Modern digital learning environment.</p>
+</div>
+
+<div class="card">
+<h3>Sports🏆</h3>
+<p>Indoor & Outdoor sports facilities.</p>
+</div>
+
+<div class="card">
+<h3>Safe Campus🎦</h3>
+<p>24x7 CCTV monitored campus.</p>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- Management Section -->
+<section class="management">
+
+    <h2>Message from our " Honourary Trustees"</h2>
+
+    <div class="management-team">
+
+        <div class="member">
+            <img src="chandrakala.jpeg" alt="Mrs. Chandrakala Rai">
+            <h3>Mrs. Chandrakala Rai</h3>
+            <p><!-- Designation --></p>
+        </div>
+        <div class="member">
+            <img src="DR.Ragini_Rai .jpeg" alt="Dr. Ragini Rai">
+            <h3>Dr. Ragini Rai</h3>
+            
+        </div>
+
+        <div class="member">
+            <img src="utpal rai.jpeg" alt="Mr. Utpal Rai">
+            <h3>Mr. Utpal Rai</h3>
+            <p><!-- Designation --></p>
+        </div>
+
+        
+
+        <div class="member">
+            <img src="chairman.png" alt="Mr. Tanmay Rai">
+            <h3>Mr. Tanmay Rai</h3>
+       
+        </div>
+
+    </div>
+
+   <div class="management-message">
+
+<p>
+Welcome to <strong>Little Steps International School</strong>.
+At Little Steps International School, we believe that every child deserves access to quality education in a nurturing, safe, and inspiring environment. Our vision is to empower young minds with knowledge, values, discipline, creativity, and confidence so they can become responsible citizens and future leaders.
+</p>
+
+<p>
+Education is not merely about academic excellence; it is about shaping character, encouraging curiosity, and preparing students to face the challenges of an ever-changing world with integrity and compassion. We are committed to providing an atmosphere where every child is encouraged to discover their unique talents and achieve their fullest potential.
+</p>
+
+<p>
+I sincerely appreciate the dedication of our Principal, teachers, staff, parents, and students, whose collective efforts continue to strengthen the foundation of our institution. Together, let us continue our journey towards excellence and create a brighter future for every child.
+</p>
+
+<p>
+We warmly welcome you to the Little Steps International School family and look forward to partnering with you in your child's journey toward a bright and successful future.
+</p>
+
+<div class="management-sign">
+
+    <h3>With Best Wishes</h3>
+
+    <div class="line"></div>
+
+    <h4>Honourable Trustees</h4>
+
+    <span>Majhwara, Mau</span>
+
+</div>
+
+</div>
+</section>
+
+<section class="principal" id="about">
+    <div class="principal-image">
+
+        <img src="principal.png" alt="Principal">
+
+        <h3>Mrs. KSHAMA DHAWAN</h3>
+
+        <span>Principal</span>
+
+    </div>
+
+    <div class="principal-text">
+
+<p>
+Welcome to our school.<br>
+Education is the foundation of a successful and meaningful life. At our school, we are committed to providing a safe, inclusive, and inspiring environment where every child is encouraged to explore, learn, and grow with confidence.
+</p>
+
+<p>
+Our aim is to nurture not only academic excellence but also strong values, discipline, creativity, leadership, and compassion. We believe that every student has unique potential, and our dedicated teachers work tirelessly to help each child achieve their personal best.
+</p>
+
+<p>
+We value the partnership between parents, teachers, and the school community. Together, we can create an atmosphere that fosters lifelong learning, responsible citizenship, and holistic development.
+</p>
+
+<p>
+As we prepare our students for the challenges of a rapidly changing world, we remain committed to innovation, character building, and excellence in education. We encourage our students to dream big, work hard, and become confident, responsible, and compassionate individuals.
+</p>
+
+<div class="quote-box">
+    "Together, we shape confident, responsible and successful future leaders."
+</div>
+
+<p>
+Thank you for placing your trust in our school. We look forward to working together to shape a bright and successful future for every child.
+</p>
+
+<p class="best-wishes">
+    <strong>🌸 With Best Wishes😊,</strong>
+</p>
+
+    </div>
+
+
+</section>
+
+
+<section class="slider-section" id="gallery">
+<h2>Campus Gallery</h2>
+
+<div class="slider">
+
+<img id="slide" src="slide1.png">
+
+</div>
+
+</section>
+
+<section class="stats">
+
+<div class="stat">
+<h2>500+</h2>
+<p>Students</p>
+</div>
+
+<div class="stat">
+<h2>20+</h2>
+<p>Teachers</p>
+</div>
+
+<div class="stat">
+<h2>30+</h2>
+<p>Classrooms</p>
+</div>
+
+<div class="stat">
+<h2>100%</h2>
+<p>Results</p>
+</div>
+
+</section>
+
+<footer>
+<section class="contact" id="contact">
+
+<h2>Contact Us</h2>
+<br>
+<div class="contact-container">
+
+<div class="contact-box">
+<h3>📍 Address</h3>
+<p>
+Little Steps International School<br>
+Village Majhwara Post Majhwara Dist Mau Pin 
+275307
+</p>
+</div>
+
+<div class="contact-box">
+<h3>📞 Phone</h3>
+<p>+91 9889818182</p>
+<p>+91 7905652579</p>
+</div>
+
+<div class="contact-box">
+<h3>📧 Email</h3>
+<p>littlestepsinternationalschool@gmail.com</p>
+</div>
+
+
+<div class="contact-box">
+<h3>🕒 Office Hours</h3>
+<p>Monday - Saturday</p>
+<p>8:00 AM - 4:00 PM</p>
+</div>
+
+
+</div>
+
+</section>
+
+<div class="social-media">
+    <h3>Follow Us</h3>
+
+    <a href="https://facebook.com/Lsis Mau" target="_blank">
+        <img src="facebook.webp" alt="Facebook">
+    </a>
+
+    <a href="https://instagram.com/lsis_majhwara" target="_blank">
+        <img src="instagram.webp" alt="Instagram">
+    </a>
+</div>
+
+<p>© 2026 LITTLE STEPS INTERNATIONAL SCHOOL | All Rights Reserved</p>
+
+</footer>
+<script>
+const title = document.getElementById("welcome-title");
+
+window.addEventListener("scroll", function () {
+
+    if (window.scrollY > 250) {
+        title.classList.add("sticky-title");
+    } else {
+        title.classList.remove("sticky-title");
+    }
+
+});
+
+const images = [
+"slide1.png",
+"slide2.jpeg",
+"slide3.png",
+"slide5.png",
+"slide4.png",
+"slide6.png",
+"computerlab.png",
+"slide7.png",
+"slide8.png",
+"slide9.png",
+"slide10.png",
+
+];
+
+let i = 0;
+
+setInterval(() => {
+i++;
+if(i >= images.length){
+i = 0;
+}
+document.getElementById("slide").src = images[i];
+},3000);
+
+</script>
+</body>
+</html>
