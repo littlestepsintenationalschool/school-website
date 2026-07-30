@@ -70,6 +70,7 @@ nav a:hover{
 }
 .hero{
     height:100vh;
+    width: 100%;
     background:url('images/school.png') no-repeat center center;
     background-size:cover;
     background-attachment:fixed;
@@ -428,6 +429,75 @@ html{
 }
 
 }
+
+@media (max-width: 768px) {
+
+  header{
+    padding:10px 15px;
+    flex-direction:column;
+    gap:10px;
+  }
+
+  nav{
+    flex-wrap:wrap;
+    justify-content:center;
+  }
+
+  nav a{
+    margin:5px 10px;
+    font-size:16px;
+  }
+
+  .school-name h2{
+    font-size:20px;
+  }
+
+  .school-name p{
+    font-size:12px;
+  }
+
+  .hero-content{
+    width:90%;
+    padding:20px;
+  }
+
+  .hero h1{
+    font-size:32px;
+  }
+
+  .hero p{
+    font-size:18px;
+  }
+
+  .section,
+  .slider-section,
+  .management,
+  .contact{
+    padding:40px 15px;
+  }
+
+  .principal{
+    flex-direction:column;
+    padding:20px;
+  }
+
+  .principal img{
+    width:220px;
+    height:auto;
+  }
+
+  .stats{
+    grid-template-columns:1fr;
+    padding:30px 15px;
+    gap:20px;
+  }
+
+  .slider img{
+    width:100%;
+    height:auto;
+  }
+
+}
 </style>
 
 </head>
@@ -469,7 +539,9 @@ html{
 <h1>Welcome To LITTLE STEPS INTERNATIONAL SCHOOL</h1>
 <p>Empowering Young Minds For A Better Tomorrow</p>
 
-<button>Admission Open</button>
+<a href="https://docs.google.com/forms/d/e/1FAIpQLSdFJHCxdgrjK4idbqQWx8LeM__6G8J5w2T2Fe7pp_C-NppkXw/viewform?usp=header">
+    <button>Admission Open</button>
+</a>
 
 </div>
 
@@ -526,7 +598,7 @@ html{
 
         <div class="member">
             <img src="images/utpal rai.jpeg" alt="Mr. Utpal Rai">
-            <h3>Mr. Utpal Rai</h3>
+            <h3>Mr. Utpal Kumar Rai</h3>
             <p><!-- Designation --></p>
         </div>
 
@@ -677,6 +749,7 @@ Village Majhwara Post Majhwara Dist Mau Pin
 <h3>📞 Phone</h3>
 <p>+91 9889818182</p>
 <p>+91 7905652579</p>
+<p>+91 9598569700</p>
 </div>
 
 <div class="contact-box">
