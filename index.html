@@ -82,27 +82,32 @@ nav a:hover{
     color:white;
     position:relative;
 }
-
 @media (max-width: 768px) {
 
-    .hero {
-        height: 100vh;
-        min-height: 650px;
-        width: 100%;
+.hero {
+    background-image: url('mschool.png');
+    background-size: 100% auto;
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-color: #ffffff;
+}
+}
+@media (max-width:768px){
 
-        background-image: url('mschool.png');
-        background-size: cover;
-        background-position: center center;
-        background-repeat: no-repeat;
-
-        background-attachment: scroll;
-
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
+.hero-content{
+    width:85%;
+    padding:15px;
 }
 
+.hero h1{
+    font-size:24px;
+}
+
+.hero p{
+    font-size:16px;
+}
+
+}
 .hero-content{
     background:rgba(0,0,0,0.5);
     padding:40px;
@@ -565,7 +570,7 @@ html,body{
 
 </header>
 <section class="hero" id="home">
-
+<img src=".png" class="hero-img">
 <div class="hero-content">
 
 <h1>Welcome To LITTLE STEPS INTERNATIONAL SCHOOL</h1>
